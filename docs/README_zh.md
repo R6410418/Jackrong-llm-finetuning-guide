@@ -66,13 +66,12 @@
 
 | 模型家族 | SFT 支持 | RL (GRPO) 支持 |
 | :--- | :---: | :---: |
-| **Qwen** (3.5 / 3) | ✅ 已发布 | ✅ 计划中 |
-| **Llama** (3.1 / 3.2 / 3.3) | ✅ 计划中 | ✅ 计划中 |
-| **Phi-4** | ✅ 计划中 | ✅ 计划中 |
-| **Gemma 4** | ✅ 计划中 | ✅ 计划中 |
-| **DeepSeek** | ✅ 计划中 | ✅ 计划中 |
-
-*注：路线图正在积极演进中。GRPO（Group Relative Policy Optimization，组相对策略优化）技术将是未来对齐数学与逻辑推理能力的核心焦点。*
+| **Qwen 3.5** | ✅ 已发布 | 已排期 |
+| **Qwen 3** | 已排期 | 已排期 |
+| **Llama** (3.1 / 3.2 / 3.3) | 已排期 | 已排期 |
+| **Phi-4** | 已排期 | 已排期 |
+| **Gemma 4** | 已排期 | 已排期 |
+| **DeepSeek** | 已排期 | 已排期 |
 
 ---
 
@@ -131,7 +130,7 @@
 @misc{jackrong-llm-finetuning,
   author = {Jackrong},
   title = {Jackrong-llm-finetuning-guide: An Educational LLM Fine-Tuning Pipeline},
-  year = {2024},
+  year = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/Jackrong/Jackrong-llm-finetuning-guide}}

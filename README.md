@@ -66,13 +66,12 @@ Below is the planned support matrix for upcoming model families:
 
 | Model Family | SFT Support | RL (GRPO) Support |
 | :--- | :---: | :---: |
-| **Qwen** (3.5 / 3) | ✅ Released | ✅ Planned |
-| **Llama** (3.1 / 3.2 / 3.3) | ✅ Planned | ✅ Planned 
-| **Phi-4** | ✅ Planned | ✅ Planned |
-| **Gemma 4** | ✅ Planned | ✅ Planned |
-| **DeepSeek** | ✅ Planned | ✅ Planned |
-
-*Note: The roadmap is actively evolving. GRPO (Group Relative Policy Optimization) techniques will be a major focus for aligning mathematical and reasoning capabilities.*
+| **Qwen 3.5** | ✅ Released | Scheduled |
+| **Qwen 3** | Scheduled | Scheduled |
+| **Llama** (3.1 / 3.2 / 3.3) | Scheduled | Scheduled |
+| **Phi-4** | Scheduled | Scheduled |
+| **Gemma 4** | Scheduled | Scheduled |
+| **DeepSeek** | Scheduled | Scheduled |
 
 ---
 
@@ -131,7 +130,7 @@ If you find this repository helpful in your learning or research, please conside
 @misc{jackrong-llm-finetuning,
   author = {Jackrong},
   title = {Jackrong-llm-finetuning-guide: An Educational LLM Fine-Tuning Pipeline},
-  year = {2024},
+  year = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/Jackrong/Jackrong-llm-finetuning-guide}}

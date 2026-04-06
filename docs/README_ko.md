@@ -66,13 +66,12 @@
 
 | 모델 라인업 | SFT 지원 | RL (GRPO) 지원 |
 | :--- | :---: | :---: |
-| **Qwen** (3.5 / 3) | ✅ 출시됨 | ✅ 계획됨 |
-| **Llama** (3.1 / 3.2 / 3.3) | ✅ 계획됨 | ✅ 계획됨 |
-| **Phi-4** | ✅ 계획됨 | ✅ 계획됨 |
-| **Gemma 4** | ✅ 계획됨 | ✅ 계획됨 |
-| **DeepSeek** | ✅ 계획됨 | ✅ 계획됨 |
-
-*참고: 이 로드맵은 활발히 업데이트되고 있습니다. GRPO(Group Relative Policy Optimization) 기법은 수학적 및 논리적 추론 능력을 모델에 정렬시키는 핵심 요소가 될 것입니다.*
+| **Qwen 3.5** | ✅ 출시됨 | 예정됨 |
+| **Qwen 3** | 예정됨 | 예정됨 |
+| **Llama** (3.1 / 3.2 / 3.3) | 예정됨 | 예정됨 |
+| **Phi-4** | 예정됨 | 예정됨 |
+| **Gemma 4** | 예정됨 | 예정됨 |
+| **DeepSeek** | 예정됨 | 예정됨 |
 
 ---
 
@@ -131,7 +130,7 @@ Qwopus 3.5 파인튜닝 프로세스 전체(환경 설정, 데이터 준비 및 
 @misc{jackrong-llm-finetuning,
   author = {Jackrong},
   title = {Jackrong-llm-finetuning-guide: An Educational LLM Fine-Tuning Pipeline},
-  year = {2024},
+  year = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/Jackrong/Jackrong-llm-finetuning-guide}}

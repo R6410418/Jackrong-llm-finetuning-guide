@@ -66,13 +66,12 @@
 
 | モデルファミリー | SFT サポート | RL (GRPO) サポート |
 | :--- | :---: | :---: |
-| **Qwen** (3.5 / 3) | ✅ リリース済み | ✅ 予定 |
-| **Llama** (3.1 / 3.2 / 3.3) | ✅ 予定 | ✅ 予定 |
-| **Phi-4** | ✅ 予定 | ✅ 予定 |
-| **Gemma 4** | ✅ 予定 | ✅ 予定 |
-| **DeepSeek** | ✅ 予定 | ✅ 予定 |
-
-*注：ロードマップは常に更新されています。GRPO (Group Relative Policy Optimization) 技術は、数学および論理的推論の能力を向上させるための次なる主要なフォーカスとなります。*
+| **Qwen 3.5** | ✅ リリース済み | 予定 |
+| **Qwen 3** | 予定 | 予定 |
+| **Llama** (3.1 / 3.2 / 3.3) | 予定 | 予定 |
+| **Phi-4** | 予定 | 予定 |
+| **Gemma 4** | 予定 | 予定 |
+| **DeepSeek** | 予定 | 予定 |
 
 ---
 
@@ -131,7 +130,7 @@ Kwopus 3.5 のファインチューニングプロセス全体（環境設定、
 @misc{jackrong-llm-finetuning,
   author = {Jackrong},
   title = {Jackrong-llm-finetuning-guide: An Educational LLM Fine-Tuning Pipeline},
-  year = {2024},
+  year = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/Jackrong/Jackrong-llm-finetuning-guide}}
