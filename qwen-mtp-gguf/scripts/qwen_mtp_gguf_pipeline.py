@@ -16,7 +16,7 @@ import subprocess
 import sys
 import time
 from dataclasses import dataclass, field
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 from typing import Any, Iterable
 
 MISSING_DEPS: list[str] = []
@@ -334,6 +334,31 @@ def repo_sizing(repo_id: str, token: str | None, allow_patterns: list[str], igno
     return result
 
 
+def safe_shard_name(name: Any) -> str:
+    """Reject shard names from an untrusted index that are not plain relative in-directory paths."""
+    if (
+        not isinstance(name, str)
+        or not name
+        or "\x00" in name
+        or not name.endswith(".safetensors")
+        or PurePosixPath(name).is_absolute()
+        or PureWindowsPath(name).is_absolute()
+        or PureWindowsPath(name).drive
+        or ".." in PurePosixPath(name.replace("\\", "/")).parts
+    ):
+        raise RuntimeError(f"Unsafe shard name in index: {name!r}")
+    return name
+
+
+def safe_shard_path(base: Path, name: Any) -> Path:
+    name = safe_shard_name(name)
+    base_abs = os.path.abspath(base)
+    path = os.path.abspath(os.path.join(base_abs, name))
+    if os.path.commonpath([path, base_abs]) != base_abs:
+        raise RuntimeError(f"Shard escapes model directory: {name!r}")
+    return Path(path)
+
+
 def source_mtp_shards(repo_id: str, token: str | None) -> tuple[list[str], list[str]]:
     index_path = hf_hub_download(repo_id=repo_id, filename="model.safetensors.index.json", token=token)
     index_data = json.loads(Path(index_path).read_text(encoding="utf-8"))
@@ -343,7 +368,7 @@ def source_mtp_shards(repo_id: str, token: str | None) -> tuple[list[str], list[
     )
     if not mtp_keys:
         raise RuntimeError(f"No MTP or nextn tensors listed in {repo_id} index")
-    return mtp_keys, sorted({weight_map[key] for key in mtp_keys})
+    return mtp_keys, sorted({safe_shard_name(weight_map[key]) for key in mtp_keys})
 
 
 def load_config_from_repo(repo_id: str, token: str | None) -> dict[str, Any]:
@@ -549,14 +574,14 @@ def validate_indexed_tensors(model_dir: Path, keys: Iterable[str], weight_map: d
             raise RuntimeError(f"Index is missing weight_map entry for {key}")
         by_file.setdefault(filename, []).append(key)
     for filename, expected_keys in sorted(by_file.items()):
-        shard = model_dir / filename
+        shard = safe_shard_path(model_dir, filename)
         if not shard.exists():
-            raise FileNotFoundError(f"Indexed shard does not exist: {shard}")
+            raise FileNotFoundError(f"Indexed shard does not exist: {filename}")
         with safe_open(str(shard), framework="pt", device="cpu") as f:
             available = set(f.keys())
         missing = sorted(set(expected_keys) - available)
         if missing:
-            raise RuntimeError(f"{shard} is missing indexed tensors: {missing[:10]}")
+            raise RuntimeError(f"{filename} is missing indexed tensors: {missing[:10]}")
 
 
 def model_has_valid_mtp(model_dir: Path, job_log: Path) -> bool:
@@ -607,7 +632,7 @@ def extract_mtp_heads(job: Job, token: str | None, target_path: Path, job_log: P
     wanted = set(mtp_keys)
     tensors = {}
     for shard_name in shards:
-        shard_path = snapshot_dir / shard_name
+        shard_path = safe_shard_path(snapshot_dir, shard_name)
         with safe_open(str(shard_path), framework="pt", device="cpu") as f:
             for key in f.keys():
                 if key in wanted:
