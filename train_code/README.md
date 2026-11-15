@@ -1,62 +1,41 @@
-# 🏋️ Training Recipe Catalog
+[← Guide home](../README.md)
 
-This catalog lists the training notebooks and Python tutorials that are currently kept under `train_code/`. Legacy notebooks remain in place to preserve existing links.
+# Training recipes
 
-## 🚀 Quick Start
+Choose by method and environment. The field guides explain where to begin and what to inspect before running each recipe.
 
-| Goal | Start here |
+## Supervised fine-tuning (SFT)
+
+| Field guide | Environment | Source |
+|---|---|---|
+| [Qwopus3.5 27B](./guides/qwopus35-27b-colab.md) | Google Colab | [Notebook](./Qwopus3-5-27b-Colab.ipynb) · [Complete PDF guide](../guidePDF/Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf) |
+| [Qwen3.5 Neo 9B](./guides/qwen35-9b-neo.md) | Kaggle | [Notebook](./Qwen3.5-9B-Neo-Kaggle.ipynb) |
+| [Qwopus3.5 35B-A3B](./guides/qwopus35-35b-a3b.md) | Kaggle | [Notebook](./Qwopus-3.5-35B-A3B-Kaggle.ipynb) |
+
+## Reinforcement learning (GRPO / GSPO)
+
+| Field guide | Environment | Source |
+|---|---|---|
+| [Qwopus3.6 27B · GSPO-style](./guides/qwopus36-27b-gspo.md) | Python | [Training script](./Qwopus3.6-27B-GSPO/qwopus3_6_27b_gspo_training.py) · [Technical notes](./Qwopus3.6-27B-GSPO/README.md) |
+| [Llama3.2-R1 3B · cold-start SFT + GRPO](./guides/llama32-3b-grpo.md) | Kaggle | [Notebook](./Llama-3.2-3B-R1-Zero-GRPO.ipynb) |
+
+## Planned recipes
+
+| Entry | Planned material |
 |---|---|
-| Run a browser-based SFT tutorial | Open a Colab or Kaggle notebook from the SFT table below |
-| Run reinforcement learning | Start with the GRPO or GSPO entries below |
-| Inspect the new Qwopus3.6 27B GSPO workflow | Open [`Qwopus3.6-27B-GSPO/README.md`](Qwopus3.6-27B-GSPO/README.md) |
-| Prepare distilled training data first | See [`../data_processing_code/README.md`](../data_processing_code/README.md) |
+| Qwopus3.8 series | Training scripts and field guides · [Coder-Flash model card](https://huggingface.co/Jackrong/Qwopus3.8-27B-Coder-Flash) |
+| DeepSeek-V4-Pro-Qwen3.5-9B | Distillation and training write-up · [Model card](https://huggingface.co/Jackrong/DeepSeek-V4-Pro-Qwen3.5-9B) |
+| DeepSeek-V4.1-Flash distillation | Distillation recipe and release notes |
+| Qwopus-9B-Coder-Flash-RL-V2 | RL recipe and a standalone GB10 training environment |
 
-## 📘 Supervised Fine-Tuning (SFT)
+## Export and deployment notes
 
-| Model | Size | Method | Environment | File | Status | Notes |
-|---|---:|---|---|---|---|---|
-| Qwopus3.5 | 27B | SFT | Google Colab | [`Qwopus3-5-27b-Colab.ipynb`](Qwopus3-5-27b-Colab.ipynb) | ✅ Released | End-to-end beginner Colab workflow with LoRA, export, and deployment notes. |
-| Qwen3.5 Neo | 9B | SFT | Kaggle | [`Qwen3.5-9B-Neo-Kaggle.ipynb`](Qwen3.5-9B-Neo-Kaggle.ipynb) | ✅ Released | Kaggle training workflow for a compact Qwen-family fine-tune. |
-| Qwopus3.5 | 35B-A3B | SFT | Kaggle | [`Qwopus-3.5-35B-A3B-Kaggle.ipynb`](Qwopus-3.5-35B-A3B-Kaggle.ipynb) | ✅ Released | Kaggle workflow for the larger Qwopus3.5 release. |
-
-## 🧪 Reinforcement Learning (GRPO / GSPO)
-
-| Model | Size | Method | Environment | File | Status | Notes |
-|---|---:|---|---|---|---|---|
-| Llama3.2-R1 | 3B | GRPO | Kaggle | [`Llama-3.2-3B-R1-Zero-GRPO.ipynb`](Llama-3.2-3B-R1-Zero-GRPO.ipynb) | ✅ Released | Browser-run reinforcement-learning notebook using GRPO terminology. |
-| Qwopus3.6 | 27B | GSPO | Python script | [`Qwopus3.6-27B-GSPO/qwopus3_6_27b_gspo_training.py`](Qwopus3.6-27B-GSPO/qwopus3_6_27b_gspo_training.py) | ✅ Released | Publication-safe GSPO-style post-training tutorial with reward tests, LoRA export, 16-bit merge, GGUF notes, and `mmproj` handling. |
-
-## 📦 Export and Deployment Notes
-
-| Topic | Where to look |
+| Artifact | Reference |
 |---|---|
-| LoRA adapter save | Individual training notebooks or the Qwopus3.6 GSPO script |
-| Merged 16-bit export | [`Qwopus3.6-27B-GSPO/README.md`](Qwopus3.6-27B-GSPO/README.md) and notebook export cells |
-| GGUF export | [`Qwopus3.6-27B-GSPO/README.md`](Qwopus3.6-27B-GSPO/README.md) and the [Qwen MTP GGUF Skill](../qwen-mtp-gguf/) |
-| Multimodal projector handling | [`Qwopus3.6-27B-GSPO/README.md#multimodal-projector-mmproj`](Qwopus3.6-27B-GSPO/README.md#multimodal-projector-mmproj) |
+| LoRA adapter | Save and reload cells in the individual notebooks, or the [GSPO adaptation guide](./guides/qwopus36-27b-gspo.md#artifacts-and-next-steps) |
+| Merged 16-bit checkpoint | [GSPO merge notes](./Qwopus3.6-27B-GSPO/README.md#merge-and-save-16-bit-model-locally) |
+| GGUF and optional vision projector | [GSPO export notes](./Qwopus3.6-27B-GSPO/README.md#export-gguf-q8_0) · [Projector notes](./Qwopus3.6-27B-GSPO/README.md#multimodal-projector-mmproj) · [Qwen MTP workflow](../qwen-mtp-gguf/README.md) |
 
-## 🧭 How to Add a New Training Recipe
+## Add a recipe
 
-Use this repeatable convention for new training folders:
-
-```text
-train_code/<model-family>-<size>-<method>/
-```
-
-For example:
-
-```text
-train_code/Qwopus3.6-27B-GSPO/
-```
-
-Each new recipe should include:
-
-| Field | Expected content |
-|---|---|
-| `README.md` | Purpose, hardware expectations, setup, dataset schema, safe dry-run commands, training commands, export notes, and privacy notice. |
-| Main script or notebook | A runnable `.py` script or `.ipynb` notebook with public-safe defaults. |
-| Requirements | A requirements file or clear environment notes. |
-| Example data | A tiny synthetic or public sample, never private training rows. |
-| Validation notes | Smoke tests, reward checks, source parity notes, or privacy audit when relevant. |
-
-Keep legacy notebooks directly under `train_code/` unless a migration is explicitly planned and all old links are preserved.
+Place the notebook or script under `train_code/` and add its field guide under `train_code/guides/`. Document the environment, dataset schema, a small validation step, and the expected export artifacts. Include a public or synthetic sample when a script needs one. [Repository maintenance guide](../docs/MAINTAINING_THE_KNOWLEDGE_BASE.md)

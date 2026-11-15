@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="143" height="20" role="img" aria-labelledby="title">
+  <title id="title">Technique · LoRA / PEFT</title>
+  <rect width="143" height="20" fill="#555"/>
+  <rect x="64" width="79" height="20" fill="#007EC6"/>
+  <g font-family="Verdana, Geneva, DejaVu Sans, sans-serif" font-size="11" text-anchor="middle">
+    <text x="32" y="14" fill="#fff">Technique</text>
+    <text x="103.5" y="14" fill="#fff">LoRA / PEFT</text>
+  </g>
+</svg>

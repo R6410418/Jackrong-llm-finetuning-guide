@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="112" viewBox="0 0 720 112" role="img" aria-labelledby="title desc">
+  <title id="title">Qwopus</title>
+  <desc id="desc">An original eight-branch abstract mark beside a serif Qwopus wordmark and fine editorial rules.</desc>
+  <path d="M0 1H720M0 111H720" fill="none" stroke="#c5d8d0"/>
+  <g fill="none" stroke="#276455" stroke-width="2.5" stroke-linecap="round">
+    <path d="M58 51C40 53 33 39 37 28M58 51C44 40 47 26 55 21M58 51C58 31 65 24 73 24M58 51C74 36 86 36 91 45M58 51C78 48 91 56 88 67M58 51C75 62 75 78 65 84M58 51C60 71 52 82 42 79M58 51C43 66 29 64 26 54"/>
+    <circle cx="58" cy="51" r="9" fill="#fafbf8"/>
+  </g>
+  <text x="117" y="75" fill="#203b33" font-family="Georgia, 'Times New Roman', serif" font-size="48" letter-spacing="-1.4">Qwopus</text>
+  <path d="M323 56H686" fill="none" stroke="#c5d8d0"/>
+  <circle cx="686" cy="56" r="3" fill="#276455"/>
+</svg>

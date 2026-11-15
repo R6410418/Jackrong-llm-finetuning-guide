@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="152" viewBox="0 0 760 152" role="img" aria-labelledby="title desc">
+  <title id="title">Qwopus field notes</title>
+  <desc id="desc">An original warm notebook ornament with a small octopus, ruled margins, and Qwopus lettering.</desc>
+  <rect width="760" height="152" rx="8" fill="#fcf8ef"/>
+  <g stroke="#d9cdbc" stroke-width="1">
+    <path d="M0 38H760M0 76H760M0 114H760"/>
+  </g>
+  <path d="M150 0V152" stroke="#b56748" stroke-width="2"/>
+  <g fill="none" stroke="#8d432e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M53 74c0-25 14-38 32-38s32 13 32 38v12c-5 8-13 10-20 7-7 4-17 4-24 0-7 3-15 1-20-7Z" fill="#f3dfca"/>
+    <path d="M57 86c-14 9-25 6-25-4M68 91c-7 21-23 22-28 10M80 96c-1 26-17 32-25 20M91 96c2 26 18 32 26 20M103 91c7 21 23 22 28 10M113 86c14 9 25 6 25-4"/>
+    <path d="M78 69v4M96 69v4" stroke-width="5"/>
+    <path d="M81 83q6 5 12 0" stroke-width="2.5"/>
+  </g>
+  <text x="184" y="91" fill="#44352d" font-family="Georgia, serif" font-size="62">Qwopus</text>
+  <path d="M454 96q58 7 116-2" fill="none" stroke="#b56748" stroke-width="2" stroke-linecap="round"/>
+  <text id="signature" x="733" y="97" fill="#8d432e" font-family="Georgia, serif" font-size="33" font-style="italic" letter-spacing=".35" text-anchor="end">Jackrong</text>
+  <path d="M185 117h128" stroke="#b56748" stroke-width="3" stroke-linecap="round"/>
+</svg>

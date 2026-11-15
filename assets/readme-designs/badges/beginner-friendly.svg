@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146" height="20" role="img" aria-labelledby="title">
+  <title id="title">Level · Beginner Friendly</title>
+  <rect width="146" height="20" fill="#555"/>
+  <rect x="39" width="107" height="20" fill="#4C1"/>
+  <g font-family="Verdana, Geneva, DejaVu Sans, sans-serif" font-size="11" text-anchor="middle">
+    <text x="19.5" y="14" fill="#fff">Level</text>
+    <text x="92.5" y="14" fill="#fff">Beginner Friendly</text>
+  </g>
+</svg>

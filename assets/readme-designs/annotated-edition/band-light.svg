@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="68" viewBox="0 0 760 68" role="img" aria-labelledby="bt bd">
+  <title id="bt">Fine-tuning notes band</title>
+  <desc id="bd">A narrow paper band with the small-caps line Jackrong, Fine-Tuning Notes, a hairline with a rust dot, and the label Field Guide, MMXXVI.</desc>
+  <rect width="760" height="68" fill="#FBF7EF"/>
+  <path d="M0 .5H760M0 67.5H760" stroke="#D9CFBC"/>
+  <text x="24" y="39" font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif" font-size="9.4" letter-spacing="2.9" fill="#6E6459">JACKRONG · FINE-TUNING NOTES</text>
+  <path d="M296 33H540" stroke="#D9CFBC"/>
+  <circle cx="548" cy="33" r="3" fill="#A4502F"/>
+  <text x="568" y="39" font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif" font-size="9.4" letter-spacing="2.9" fill="#6E6459">FIELD GUIDE</text>
+</svg>
