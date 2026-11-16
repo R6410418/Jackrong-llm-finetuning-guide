@@ -8,6 +8,7 @@ Choose by method and environment. The field guides explain where to begin and wh
 
 | Field guide | Environment | Source |
 |---|---|---|
+| [Qwopus3.8 27B](./guides/qwen38-27b-colab.md) | Google Colab | [Notebook](./Qwen3.8-27B-Colab.ipynb) |
 | [Qwopus3.5 27B](./guides/qwopus35-27b-colab.md) | Google Colab | [Notebook](./Qwopus3-5-27b-Colab.ipynb) · [Complete PDF guide](../guidePDF/Qwopus3-5-27b-Colab_complete_guide_to_llm_finetuning.pdf) |
 | [Qwen3.5 Neo 9B](./guides/qwen35-9b-neo.md) | Kaggle | [Notebook](./Qwen3.5-9B-Neo-Kaggle.ipynb) |
 | [Qwopus3.5 35B-A3B](./guides/qwopus35-35b-a3b.md) | Kaggle | [Notebook](./Qwopus-3.5-35B-A3B-Kaggle.ipynb) |

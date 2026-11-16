@@ -26,6 +26,7 @@ Each guide follows the published notebook or script through setup, data, trainin
 
 | Recipe guide | Method | Environment | Focus | Quick setup |
 |---|---|---|---|---|
+| [Qwopus3.8 27B](./train_code/guides/qwen38-27b-colab.md) | SFT | Colab | Qwen3.8 chat template with adjustable reasoning effort | [![Open in Colab](./assets/readme-designs/badges/open-in-colab.svg)](https://colab.research.google.com/github/R6410418/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwen3.8-27B-Colab.ipynb) |
 | [Qwopus3.5 27B](./train_code/guides/qwopus35-27b-colab.md) | SFT | Colab | An end-to-end LoRA example with a companion PDF | [![Open in Colab](./assets/readme-designs/badges/open-in-colab.svg)](https://colab.research.google.com/github/R6410418/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwopus3-5-27b-Colab.ipynb) |
 | [Qwopus3.6 27B](./train_code/guides/qwopus36-27b-gspo.md) | GSPO-style RL | Python | Inspect the dataset schema, reward tests, and export paths | [![Python script](./assets/readme-designs/badges/python.svg)](./train_code/Qwopus3.6-27B-GSPO/qwopus3_6_27b_gspo_training.py) |
 | [Qwen3.5 Neo 9B](./train_code/guides/qwen35-9b-neo.md) | SFT | Kaggle | Normalize reasoning records and train on assistant responses | [![Open in Kaggle](./assets/readme-designs/badges/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/R6410418/Jackrong-llm-finetuning-guide/blob/main/train_code/Qwen3.5-9B-Neo-Kaggle.ipynb) |
